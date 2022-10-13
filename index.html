@@ -12,10 +12,17 @@
       <section>
         <h2>Calcular el área y perímetro de un cuadrado</h2>
         <form action="">
-          <label for="">Escribe cuánto mide cada lado de tu cuadrado:</label>
-          <input type="number" />
-          <button>Calcular el perímetro</button>
-          <button>Calcular el area</button>
+          <label for="InputCuadrado"
+            >Escribe cuánto mide cada lado de tu cuadrado:
+          </label>
+          <input id="inputCuadrado" type="number" />
+          <button type="button" onClick="calcularPerimetro()">
+            Calcular el perímetro
+          </button>
+          <button type="button" onClick="calcularPerimetro()">
+            Calcular el area
+          </button>
+          <p class="result"></p>
         </form>
       </section>
     </main>

@@ -52,5 +52,22 @@ function areaCirculo(radio) {
 areaCirculo();
 
 
+// funciones de HTML
 
+const input = document.getElementById('inputCuadrado');
+const result = document.querySelector('.result');
+
+
+function calcularPerimetro() {
+    const value = input.value;
+    const perimetro = perimetroSquare(value);
+    result.innerHTML = perimetro;
+
+}
+
+function calcularArea() {
+    const value = input.value;
+    const area = areaSquare(value);
+    result.innerHTML.value = area;
+}
 
