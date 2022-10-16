@@ -54,20 +54,51 @@ areaCirculo();
 
 // funciones de HTML
 
-const input = document.getElementById('inputCuadrado');
-const result = document.querySelector('.result');
+const inputCuadrado = document.getElementById('inputCuadrado');
+const inputTriangle1 = document.getElementById('inputTriangulo1');
+const inputTriangle2 = document.getElementById('inputTriangulo2');
+const baseTriangulo = document.getElementById('baseTriangulo');
+const alturaTriangle = document.getElementById('alturaTriangle');
+const resultCuadrado = document.querySelector('.resultCuadrado');
+const resultTriangulo = document.querySelector('.resultTriangulo');
+const perimetroCuadrado = document.querySelector('.perimetroCuadrado');
+const perimetroTrianguloButton = document.querySelector('.perimetroTriangulo');
+const areaTrianguloButton = document.querySelector('.areaTriangulo');
+const areaCuadrado = document.querySelector('.areaCuadrado');
 
-
+// cuadrado
 function calcularPerimetro() {
-    const value = input.value;
+    const value = inputCuadrado.value;
     const perimetro = perimetroSquare(value);
-    result.innerHTML = perimetro;
+    resultCuadrado.innerHTML = perimetro;
 
 }
 
 function calcularArea() {
-    const value = input.value;
+    const value = inputCuadrado.value;
     const area = areaSquare(value);
-    result.innerHTML.value = area;
+    resultCuadrado.innerHTML = area;
 }
 
+perimetroCuadrado.addEventListener('click', calcularPerimetro);
+areaCuadrado.addEventListener('click', calcularArea);
+
+// triangulo
+
+function perimetroTriangulo() {
+    const value1 = parseInt(inputTriangle1.value);
+    const value2 = parseInt(inputTriangle2.value);
+    const value3 = parseInt(baseTriangulo.value);
+    const trianglePerimetro = perimetroTriangle(value1, value2, value3);
+    console.log(trianglePerimetro)
+    resultTriangulo.innerHTML = trianglePerimetro;
+}
+function areaTriangulo() {
+    const value3 = parseInt(baseTriangulo.value);
+    const value4 = parseInt(alturaTriangle.value);
+    const areaTriangulo = areaTriangle(value3, value4);
+    resultTriangulo.innerHTML = areaTriangulo;
+}
+
+perimetroTrianguloButton.addEventListener('click', perimetroTriangulo);
+areaTrianguloButton.addEventListener('click', areaTriangulo);
