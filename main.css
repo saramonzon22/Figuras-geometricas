@@ -1,4 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    width: 100%;
+    height: 10vh;
+    background-image: url(./header.jpg);
+    display: flex;
+    justify-content: center;
+}
+.title1 {
+    text-decoration: none;
+    font-family: 'Silkscreen', cursive;
+    font-size: 1.2rem;
+    align-self: center;
+    background-color: #7180B9;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    text-shadow: black 2px 2px;
+}
+.main {
+    min-height: 90vh;
+    width: 100%;
+    background-color: #7180B9;
+    font-family: 'Silkscreen', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.title2 {
+    color: white;
+    text-shadow: black 2px 2px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .fieldsetCuadrado {
     border-color: orange;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    gap: 5px;
+    background-color: #F2A541;
+}
+.fieldsetTriangulo {
+    border-color: orange;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    gap: 5px;
+    background-color: #F2A541;
+}
+.fieldsetCirculo {
+    border-color: orange;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    gap: 5px;
+    background-color: #F2A541;
+}
+input {
+    width: 20vw;
+}
+button {
+    width: 20vw;
 }
