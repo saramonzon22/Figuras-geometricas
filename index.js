@@ -70,14 +70,16 @@ const areaCuadrado = document.querySelector('.areaCuadrado');
 function calcularPerimetro() {
     const value = inputCuadrado.value;
     const perimetro = perimetroSquare(value);
-    resultCuadrado.innerHTML = perimetro;
+    resultCuadrado.classList.add('result-color');
+    resultCuadrado.innerHTML = 'Resultado: ' + ' ' + perimetro + ' cm';
 
 }
 
 function calcularArea() {
     const value = inputCuadrado.value;
     const area = areaSquare(value);
-    resultCuadrado.innerHTML = area;
+    resultCuadrado.classList.add('result-color');
+    resultCuadrado.innerHTML = 'Resultado: ' + ' ' + area + ' cm2';
 }
 
 perimetroCuadrado.addEventListener('click', calcularPerimetro);
@@ -90,15 +92,18 @@ function perimetroTriangulo() {
     const value2 = parseInt(inputTriangle2.value);
     const value3 = parseInt(baseTriangulo.value);
     const trianglePerimetro = perimetroTriangle(value1, value2, value3);
-    console.log(trianglePerimetro)
-    resultTriangulo.innerHTML = trianglePerimetro;
+    resultTriangulo.classList.add('result-color');
+    resultTriangulo.innerHTML = 'Resultado: ' + ' ' + trianglePerimetro + ' cm';
 }
 function areaTriangulo() {
     const value3 = parseInt(baseTriangulo.value);
     const value4 = parseInt(alturaTriangle.value);
     const areaTriangulo = areaTriangle(value3, value4);
-    resultTriangulo.innerHTML = areaTriangulo;
+    resultTriangulo.classList.add('result-color');
+    resultTriangulo.innerHTML = 'Resultado: ' + ' ' + areaTriangulo + ' cm2';
 }
 
 perimetroTrianguloButton.addEventListener('click', perimetroTriangulo);
 areaTrianguloButton.addEventListener('click', areaTriangulo);
+
+// circunferencia

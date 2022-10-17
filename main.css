@@ -52,7 +52,7 @@
     flex-direction: column;
     align-items: center;
     width: 50vw;
-    gap: 5px;
+    gap: 10px;
     background-color: #F2A541;
 }
 .fieldsetTriangulo {
@@ -62,7 +62,7 @@
     flex-direction: column;
     align-items: center;
     width: 50vw;
-    gap: 5px;
+    gap: 10px;
     background-color: #F2A541;
 }
 .fieldsetCirculo {
@@ -72,8 +72,18 @@
     flex-direction: column;
     align-items: center;
     width: 50vw;
-    gap: 5px;
+    gap: 10px;
     background-color: #F2A541;
+}
+label {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.reset {
+    width: 30px;
+    height: 30px;
 }
 input {
     width: 20vw;
@@ -81,15 +91,35 @@ input {
     border: solid 1px black;
     text-align: center;
     border-radius: 10px;
+    text-transform: capitalize;
+    color: black;
 }
+
 button {
     width: 20vw;
-    height: 50px;
+    height: 40px;
     border-radius: 10px;
+
     @media all and (min-width: 768px) {
         width: 20vw;
         height: 20px;
         border-radius: 10px;
         
     }
+}
+.perimetroTriangulo, .perimetroCuadrado, .perimetroCirculo {
+    background-color: #6BEFA5;
+}
+.areaTriangulo, .areaCuadrado, .areaCirculo {
+    background-color: #DD5540;
+}
+.result-color {
+    background-color: white;
+    max-width: max-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    padding: 5px;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 10px;
 }

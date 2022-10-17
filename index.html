@@ -9,6 +9,17 @@
       href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6d7b554f88.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" href="main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Figuras | Curso JS</title>
@@ -23,7 +34,10 @@
         <form action="" class="section1">
           <fieldset class="fieldsetCuadrado">
             <label for="InputCuadrado"
-              >Escribe cuánto mide cada lado de tu cuadrado:
+              >Escribe cuánto mide cada lado de tu cuadrado
+              <button type="button" class="reset">
+                <i class="fa-solid fa-trash"></i>
+              </button>
             </label>
             <input id="inputCuadrado" type="number" />
             <button type="button" class="perimetroCuadrado">
@@ -34,17 +48,20 @@
           </fieldset>
           <fieldset class="fieldsetTriangulo">
             <label for="InputCuadrado"
-              >Escribe cuánto mide cada lado de tu triangulo:
+              >Escribe cuánto mide cada lado de tu triángulo
+              <button type="button" class="reset">
+                <i class="fa-solid fa-trash"></i>
+              </button>
             </label>
             <input
               id="inputTriangulo1"
               type="number"
-              placeholder="lado triangulo 1"
+              placeholder="lado triangulo a"
             />
             <input
               id="inputTriangulo2"
               type="number"
-              placeholder="lado triangulo 2"
+              placeholder="lado triangulo b"
             />
             <input
               id="baseTriangulo"
@@ -66,8 +83,12 @@
           </fieldset>
           <fieldset class="fieldsetCirculo">
             <label for="InputCirculo"
-              >Escribe cuánto mide el radio de tu circunferencia:
+              >Escribe cuánto mide el radio de tu circunferencia
+              <button type="button" class="reset">
+                <i class="fa-solid fa-trash"></i>
+              </button>
             </label>
+
             <input id="InputCirculo" type="number" />
             <button type="button" class="diametroCirculo">
               Calcular el diametro
