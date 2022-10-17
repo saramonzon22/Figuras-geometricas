@@ -140,15 +140,16 @@ function diametroCircle() {
 function circlePerimetro() {
     const value = parseInt(inputCirculo.value);
     const perimetroC = perimetroCirculo(value);
+    const limite = perimetroC.toFixed(3);
     resultCirculo.classList.add('result-color');
-    resultCirculo.innerHTML = 'Resultado: ' + ' ' + perimetroC + ' cm2'
+    resultCirculo.innerHTML = 'Resultado: ' + ' ' + limite + ' cm'
 }
 function circleArea() {
     const value = parseInt(inputCirculo.value);
     const areaCircle = areaCirculo(value);
     const limite = areaCircle.toFixed(3);
     resultCirculo.classList.add('result-color');
-    resultCirculo.innerHTML = 'Resultado: ' + ' ' + limite + ' cm3'
+    resultCirculo.innerHTML = 'Resultado: ' + ' ' + limite + ' cm2'
 }
 
 function resetCircle() {
