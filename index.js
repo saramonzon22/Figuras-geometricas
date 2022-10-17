@@ -14,7 +14,6 @@ function areaSquare(lado) {
 }
 areaSquare();
 
-
 // código del triángulo
 
 function perimetroTriangle(lado1, lado2, base) {
@@ -27,7 +26,6 @@ function areaTriangle(base, altura) {
 }
 areaTriangle();
 
-
 // código del círculo 
 
 function diametroCirculo(radio) {
@@ -38,33 +36,42 @@ diametroCirculo();
 const PI = Math.PI;
 console.log('El pi es ' + PI);
 
-
 function perimetroCirculo(radio) {
     const diametro = diametroCirculo(radio);
     return diametro * PI;
 }
 perimetroCirculo();
 
-
 function areaCirculo(radio) {
     return (radio * radio) * PI;
 }
 areaCirculo();
 
-
-// funciones de HTML
-
+// const cuadrado
 const inputCuadrado = document.getElementById('inputCuadrado');
+const resultCuadrado = document.querySelector('.resultCuadrado');
+const perimetroCuadrado = document.querySelector('.perimetroCuadrado');
+const areaCuadrado = document.querySelector('.areaCuadrado');
+const resetSquare = document.querySelector('.reset-cuadrado');
+
+// const triangulo
 const inputTriangle1 = document.getElementById('inputTriangulo1');
 const inputTriangle2 = document.getElementById('inputTriangulo2');
 const baseTriangulo = document.getElementById('baseTriangulo');
 const alturaTriangle = document.getElementById('alturaTriangle');
-const resultCuadrado = document.querySelector('.resultCuadrado');
 const resultTriangulo = document.querySelector('.resultTriangulo');
-const perimetroCuadrado = document.querySelector('.perimetroCuadrado');
 const perimetroTrianguloButton = document.querySelector('.perimetroTriangulo');
 const areaTrianguloButton = document.querySelector('.areaTriangulo');
-const areaCuadrado = document.querySelector('.areaCuadrado');
+const resetTriangulo = document.querySelector('.reset-triangulo');
+
+// const circle
+const inputCirculo = document.getElementById('inputCirculo');
+const resultCirculo = document.querySelector('.resultCirculo');
+const perimetroCircButton = document.querySelector('.perimetroCirculo');
+const areaCirculoButton = document.querySelector('.areaCirculo');
+const diametroCircleButton = document.querySelector('.diametroCirculo');
+const resetCirculo = document.querySelector('.reset-circle');
+
 
 // cuadrado
 function calcularPerimetro() {
@@ -82,8 +89,15 @@ function calcularArea() {
     resultCuadrado.innerHTML = 'Resultado: ' + ' ' + area + ' cm2';
 }
 
+function resetCuadrado() {
+    inputCuadrado.value = '';
+    resultCuadrado.classList.remove('result-color');
+    resultCuadrado.innerHTML = '';
+}
+
 perimetroCuadrado.addEventListener('click', calcularPerimetro);
 areaCuadrado.addEventListener('click', calcularArea);
+resetSquare.addEventListener('click', resetCuadrado);
 
 // triangulo
 
@@ -102,8 +116,48 @@ function areaTriangulo() {
     resultTriangulo.classList.add('result-color');
     resultTriangulo.innerHTML = 'Resultado: ' + ' ' + areaTriangulo + ' cm2';
 }
+function resetTriangle() {
+    inputTriangle1.value = '';
+    inputTriangle2.value = '';
+    baseTriangulo.value = '';
+    alturaTriangle.value = '';
+    resultTriangulo.classList.remove('result-color');
+    resultTriangulo.innerHTML = '';
+}
 
 perimetroTrianguloButton.addEventListener('click', perimetroTriangulo);
 areaTrianguloButton.addEventListener('click', areaTriangulo);
+resetTriangulo.addEventListener('click', resetTriangle);
 
 // circunferencia
+
+function diametroCircle() {
+    const value = parseInt(inputCirculo.value);
+    const diametroC = diametroCirculo(value);
+    resultCirculo.classList.add('result-color');
+    resultCirculo.innerHTML = 'Resultado: ' + ' ' + diametroC + ' cm'
+}
+function circlePerimetro() {
+    const value = parseInt(inputCirculo.value);
+    const perimetroC = perimetroCirculo(value);
+    resultCirculo.classList.add('result-color');
+    resultCirculo.innerHTML = 'Resultado: ' + ' ' + perimetroC + ' cm2'
+}
+function circleArea() {
+    const value = parseInt(inputCirculo.value);
+    const areaCircle = areaCirculo(value);
+    const limite = areaCircle.toFixed(3);
+    resultCirculo.classList.add('result-color');
+    resultCirculo.innerHTML = 'Resultado: ' + ' ' + limite + ' cm3'
+}
+
+function resetCircle() {
+    inputCirculo.value = '';
+    resultCirculo.classList.remove('result-color');
+    resultCirculo.innerHTML = '';
+}
+
+diametroCircleButton.addEventListener('click', diametroCircle);
+perimetroCircButton.addEventListener('click', circlePerimetro);
+areaCirculoButton.addEventListener('click', circleArea);
+resetCirculo.addEventListener('click', resetCircle);
